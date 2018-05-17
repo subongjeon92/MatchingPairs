@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameDifficultyActivity">
+
+    <SeekBar
+        android:id="@+id/seekgamedifficulty"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekText"
+    />
+
+    <TextView
+        android:id="@+id/seekText"
+        android:layout_width="96dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="100dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4"/>
+
+    <Button
+        android:id="@+id/launchGame"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:onClick="launchGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekgamedifficulty"
+        tools:text="Begin"
+        />
+</android.support.constraint.ConstraintLayout>
