@@ -12,8 +12,7 @@ public class MusicActivity extends Service{
     private static final String TAG = null;
     MediaPlayer player;
 
-    @Nullable
-    @Override
+
     public IBinder onBind(Intent intent) {
         return null;
     }
@@ -26,15 +25,23 @@ public class MusicActivity extends Service{
         player.setVolume(100,100);
     }
 
-    @SuppressLint("WrongConstant")
     public int onStartCommand(Intent intent, int flags, int startId){
         player.start();
-        return 1;
+        return START_STICKY;
     }
 
     @Override
     public void onDestroy(){
         player.stop();
         player.release();
+    }
+
+    @Override
+    public void onLowMemory(){
+
+    }
+
+    public IBinder onUnBind(Intent arg0){
+        return null;
     }
 }
