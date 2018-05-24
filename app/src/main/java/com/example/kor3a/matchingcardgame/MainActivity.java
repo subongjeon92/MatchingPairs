@@ -27,20 +27,20 @@ public class MainActivity extends AppCompatActivity {
         //For music on and off
         musicToggle.setTextOff("Music Off");
         musicToggle.setTextOn("Music On");
-//        final Intent musicStuff = new Intent(MainMenu.this, BGMService.class);
+        final Intent musicStuff = new Intent(MainActivity.this, MusicActivity.class);
 
-//        musicToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-//            @Override
-//            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked){
-//                if(isChecked){
-//                    //music on
-//                    startService(musicStuff);
-//                }else{
-//                    //music off
-//                    stopService(musicStuff);
-//                }
-//            }
-//        });
+        musicToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked){
+                if(isChecked){
+                    //music on
+                    startService(musicStuff);
+                }else{
+                    //music off
+                    stopService(musicStuff);
+                }
+            }
+        });
     }
 
     public void startGame(View view){
