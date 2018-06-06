@@ -1,11 +1,9 @@
 package com.example.kor3a.matchingcardgame;
 
-import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
 
 public class MusicActivity extends Service{
 

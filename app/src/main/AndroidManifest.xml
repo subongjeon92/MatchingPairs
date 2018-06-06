@@ -20,6 +20,8 @@
         <activity android:name=".Game" />
         <activity android:name=".WinGameActivity" />
         <activity android:name=".Highscore"></activity>
+        <service android:name = ".MusicActivity"
+            android:enabled="true"/>
     </application>
 
 </manifest>

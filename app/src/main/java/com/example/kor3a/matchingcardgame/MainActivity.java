@@ -25,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
         highscoreActivity.setText("Highscores");
 
         //For music on and off
-        musicToggle.setTextOff("Music Off");
+        musicToggle.setText("Music");
         musicToggle.setTextOn("Music On");
-        final Intent musicStuff = new Intent(MainActivity.this, MusicActivity.class);
+        musicToggle.setTextOff("Music Off");
 
+        final Intent musicStuff = new Intent(MainActivity.this, MusicActivity.class);
+        startService(musicStuff);
         musicToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked){
